@@ -1,0 +1,32 @@
+[
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPort.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPort.cpp"
+  },
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortBase.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortBase.cpp"
+  },
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfo.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfo.cpp"
+  },
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoBase.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoBase.cpp"
+  },
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortNativeSyncWinBase.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortNativeSyncWinBase.cpp"
+  },
+  {
+    "directory": "C:\\Users\\clover\\Desktop\\CDC_windows\\build\\thirdparty\\CSerialPort\\lib",
+    "command": "\"C:\\Windows\\system32\\CL.exe\" \/IC:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\cmake\\..\\include \/nologo \/W3 \/WX- \/diagnostics:column \/O2 \/Ob2 \/D _WINDLL \/D _MBCS \/D WIN32 \/D _WINDOWS \/D NDEBUG \/D BUILDING_LIBCSERIALPORT \/D CSERIALPORT_NATIVE_SYNC \/D \"CMAKE_INTDIR=\\\"Release\\\"\" \/D libcserialport_EXPORTS \/EHsc \/MD \/GR \/Fo\"libcserialport.dir\\Release\\\\\" \/TP --target=amd64-pc-windows-msvc   \"C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoWinBase.cpp\"",
+    "file": "C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoWinBase.cpp"
+  }
+]

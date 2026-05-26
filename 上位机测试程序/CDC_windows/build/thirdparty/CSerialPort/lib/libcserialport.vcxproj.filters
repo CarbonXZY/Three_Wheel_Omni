@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPortBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPortInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPortInfoBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPortNativeSyncWinBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\src\SerialPortInfoWinBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPort_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPort_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortInfoBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\IProtocolParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\ibuffer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\ilog.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\ithread.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\itimer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\iutils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortNativeSyncWinBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\include\CSerialPort\SerialPortInfoWinBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\clover\Desktop\CDC_windows\thirdparty\CSerialPort\lib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{03E1C608-701E-3E80-B7CF-E516A0BEDC2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B485C3D0-094B-3BDE-A6A5-5D42EC7F324E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

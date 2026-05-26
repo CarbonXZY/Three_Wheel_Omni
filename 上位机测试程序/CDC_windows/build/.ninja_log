@@ -1,0 +1,25 @@
+# ninja log v6
+15	204	8014296605691386	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortBase.cpp.obj	9650e32bd2e884e3
+20	340	8014296605744312	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfo.cpp.obj	dc9dc4f349dd08d1
+29	578	8014296605830717	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortNativeSyncWinBase.cpp.obj	64f5f9df8f788a05
+32	667	8014296605864537	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfoWinBase.cpp.obj	8d52137333562b6e
+9	730	8014296605631874	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPort.cpp.obj	a70fff9e2c5852cd
+25	676	8014296605786594	thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfoBase.cpp.obj	fccca9a2a09f61b3
+35	767	8014296605886863	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+731	840	8014296613698320	Release/libcserialport.dll	6f15a751f4966d1b
+731	840	8014296613698320	thirdparty/CSerialPort/lib/libcserialport.lib	6f15a751f4966d1b
+840	949	8014296613941729	Release/MySerialApp.exe	53fa44c10acbb253
+66	644	8015190505739468	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+645	749	8015190511517250	Release/MySerialApp.exe	53fa44c10acbb253
+44	658	8015191311414883	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+658	754	8015191317552856	Release/MySerialApp.exe	53fa44c10acbb253
+61	659	8015192344440387	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+78	185	8015192448598703	Release/MySerialApp.exe	53fa44c10acbb253
+36	624	8015209759254826	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+624	726	8015209765129919	Release/MySerialApp.exe	53fa44c10acbb253
+72	678	8015210719158195	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+679	773	8015210725225447	Release/MySerialApp.exe	53fa44c10acbb253
+73	641	8015211181902843	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+642	732	8015211187593493	Release/MySerialApp.exe	53fa44c10acbb253
+71	684	8015211528029849	CMakeFiles/MySerialApp.dir/main.cpp.obj	f4c4698de8aaab6a
+684	785	8015211534155498	Release/MySerialApp.exe	53fa44c10acbb253
