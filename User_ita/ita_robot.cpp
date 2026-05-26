@@ -20,25 +20,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* Private function declarations ---------------------------------------------*/
-static bool DR16_Has_Remote_Input(Class_DR16 &dr16)
-{
-    return (dr16.Get_Left_X() != 0.0f ||
-            dr16.Get_Left_Y() != 0.0f ||
-            dr16.Get_Right_X() != 0.0f ||
-            dr16.Get_Right_Y() != 0.0f ||
-            dr16.Get_Yaw() != 0.0f);
-}
 
-static bool DR16_Has_Keyboard_Input(Class_DR16 &dr16)
-{
-    return (dr16.Get_Mouse_X() != 0.0f ||
-            dr16.Get_Mouse_Y() != 0.0f ||
-            dr16.Get_Mouse_Z() != 0.0f ||
-            dr16.Get_Keyboard_Key_A() != 0 ||
-            dr16.Get_Keyboard_Key_D() != 0 ||
-            dr16.Get_Keyboard_Key_W() != 0 ||
-            dr16.Get_Keyboard_Key_S() != 0);
-}
 
 /**
  * @brief 底盘，云台，发射机构初始化
@@ -48,7 +30,7 @@ void Class_Chariot::Init(float __Dead_Zone)
 {
     DR16.Init(&huart5);
     Orin.Init(&hfdcan2);
-
+    MiniPC.Init(USB_Manage_Object);
     Chassis.Init();
 
     Dead_Zone = __Dead_Zone;
@@ -69,7 +51,7 @@ void Class_Chariot::TIM_101ms_Alive_PeriodElapsedCallback()
  */
 void Class_Chariot::TIM_100ms_Alive_PeriodElapsedCallback()
 {
-    DR16.TIM1msMod50_Alive_PeriodElapsedCallback();
+    DR16.TIM1msMod100_Alive_PeriodElapsedCallback();
     Chassis.TIM_100ms_Alive_PeriodElapsedCallback();
 }
 
@@ -79,7 +61,7 @@ void Class_Chariot::TIM_100ms_Alive_PeriodElapsedCallback()
  */
 void Class_Chariot::TIM_Unline_Protect_PeriodElapsedCallback()
 {
-    if (DR16.Get_DR16_Status() == DR16_Status_DISABLE)
+    if (DR16.Get_SBUS_Status() == SBUS_Status_DISABLE)
     {
         Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_DISABLE);
         Chassis.Set_Target_Velocity_X(0);
@@ -87,7 +69,7 @@ void Class_Chariot::TIM_Unline_Protect_PeriodElapsedCallback()
         Chassis.Set_Target_Omega(0);
         return;
     }
-    if (DR16.Get_Right_Switch() == DR16_Switch_Status_UP &&
+    if (DR16.Get_Switch_C() == SBUS_Switch_Status_UP &&
         Orin.Get_Status() == Orin_Status_DISABLE)    
     {
         Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_DISABLE);
@@ -112,18 +94,9 @@ void Class_Chariot::TIM_Calculate_PeriodElapsedCallback()
  */
 void Class_Chariot::Judge_DR16_Control_Type()
 {
-    if (DR16_Has_Remote_Input(DR16) == true)
-    {
+    
         DR16_Control_Type = DR16_Control_Type_REMOTE;
-    }
-    else if (DR16_Has_Keyboard_Input(DR16) == true)     
-    {
-        DR16_Control_Type = DR16_Control_Type_KEYBOARD;
-    }
-    else
-    {
-        DR16_Control_Type = DR16_Control_Type_NONE;
-    }
+    
 }
 
 /**
@@ -136,16 +109,20 @@ void Class_Chariot::Judge_Active_Controller()
     Judge_DR16_Control_Type();
 
     // 判断当前活动的控制器
-    if (DR16.Get_Right_Switch() != DR16_Switch_Status_UP && 
-        DR16.Get_DR16_Status() == DR16_Status_ENABLE)
+    if (DR16.Get_Switch_C() != SBUS_Switch_Status_UP && 
+        DR16.Get_SBUS_Status() == SBUS_Status_ENABLE)
     {
         Active_Controller = Controller_DR16;
     }
-    else if (DR16.Get_Right_Switch() == DR16_Switch_Status_UP &&
+    else if (DR16.Get_Switch_C() ==  SBUS_Switch_Status_UP&&
              Orin.Get_Status() == Orin_Status_ENABLE)
     {
         Active_Controller = Controller_Orin;
     }    
+    else if (DR16.Get_Switch_C() == SBUS_Switch_Status_UP)
+			{
+        Active_Controller = Controller_MiniPC;
+    }
     else
     {
         Active_Controller = Controller_NONE;
@@ -162,12 +139,15 @@ void Class_Chariot::Control_Chassis()
     Judge_Active_Controller();
 
     /************************************上位机控制逻辑*********************************************/
-    if (Active_Controller == Controller_Orin)
+    if (Active_Controller == Controller_Orin||Active_Controller == Controller_MiniPC)
     {
-        float orin_vx = Orin.Get_Target_Velocity_X();
-        float orin_vy = Orin.Get_Target_Velocity_Y();
-        float orin_omega = Orin.Get_Target_Omega();
+        // float orin_vx = Orin.Get_Target_Velocity_X();
+        // float orin_vy = Orin.Get_Target_Velocity_Y();
+        // float orin_omega = Orin.Get_Target_Omega();
 
+        float orin_vx = MiniPC.Get_MiniPC_Velocity_X();
+        float orin_vy = MiniPC.Get_MiniPC_Velocity_Y();
+        float orin_omega = MiniPC.Get_MiniPC_Omega();
         Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_FLLOW);
         Chassis.Set_Target_Velocity_X(orin_vx);
         Chassis.Set_Target_Velocity_Y(orin_vy);
@@ -193,7 +173,7 @@ void Class_Chariot::Control_Chassis()
         chassis_omega = dr16_yaw * Chassis.Get_Omega_Max();
         chassis_angle += chassis_omega;
         // 键盘遥控器操作逻辑
-        if (DR16.Get_Right_Switch() == DR16_Switch_Status_UP) // 上位机用，遥控器不可打断
+        if (DR16.Get_Switch_C() == SBUS_Switch_Status_UP) // 上位机用，遥控器不可打断
         {
 //            Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_FLLOW);
 //            Chassis.Set_Target_Velocity_X(chassis_velocity_x);
@@ -201,11 +181,11 @@ void Class_Chariot::Control_Chassis()
 //            Chassis.Set_Target_Omega(chassis_omega);
 			Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_DISABLE);
         }
-        else if (DR16.Get_Right_Switch() == DR16_Switch_Status_DOWN) // 底盘停转
+        else if (DR16.Get_Switch_C() == SBUS_Switch_Status_DOWN) // 底盘停转
         {
             Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_DISABLE);
         }
-        else if (DR16.Get_Right_Switch() == DR16_Switch_Status_MIDDLE) // 底盘随动，遥控器专用
+        else if (DR16.Get_Switch_C() == SBUS_Switch_Status_MIDDLE) // 底盘随动，遥控器专用
         {
             Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_FLLOW);
             Chassis.Set_Target_Velocity_X(chassis_velocity_x);

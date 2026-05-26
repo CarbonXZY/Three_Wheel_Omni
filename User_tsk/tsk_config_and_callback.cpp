@@ -4,6 +4,8 @@
 #include "dvc_dwt.h"
 #include "drv_bsp.h"
 #include "drv_can.h"
+#include "drv_usb.h"
+#include "dvc_minipc.h"
 
 Class_Chariot chariot;
 uint32_t flag = 0;
@@ -72,7 +74,7 @@ void Device_FDCAN2_Callback(Struct_FDCAN_Rx_Buffer *FDCAN_RxMessage)
  */
 void DR16_UART5_Callback(uint8_t *Buffer, uint16_t Length)
 {
-    chariot.DR16.DR16_UART_RxCpltCallback(Buffer,Length);
+    chariot.DR16.SBUS_UART_RxCpltCallback(Buffer,Length);
     // 底盘 云台 发射机构 的控制策略
     chariot.TIM_Control_Callback();
 }
@@ -83,7 +85,7 @@ void DR16_UART5_Callback(uint8_t *Buffer, uint16_t Length)
  */
 void Task10ms_TIM4_Callback()
 {
-    if (chariot.DR16.Get_Right_Switch() == DR16_Switch_Status_UP)
+    if (chariot.DR16.Get_Switch_C() == SBUS_Switch_Status_UP)
     {
         chariot.TIM_Control_Callback();// 右拨杆在UP时，再刷新一次底盘控制决策
     }
@@ -126,7 +128,11 @@ void Task1ms_TIM5_Callback()
     chariot.TIM_Calculate_PeriodElapsedCallback();
     TIM_1ms_CAN_PeriodElapsedCallback();
 }
-
+void MiniPC_Callback(uint8_t *rx_data, uint32_t len) 
+{
+    // 如果你不需要用到 len，直接放着就行
+    chariot.MiniPC.USB_Rx_Callback(rx_data);
+}
 /**
  * @brief 初始化任务
  *
@@ -143,11 +149,11 @@ void Task_Init()
 
     // UART初始化
     UART_Init(&huart5, DR16_UART5_Callback, 64);
+    USB_Init(MiniPC_Callback, 11);
     // 定时器初始化
     TIM_Init(&htim4, Task10ms_TIM4_Callback);
     TIM_Init(&htim5, Task1ms_TIM5_Callback);
     chariot.Init(0.03);
-
     // 外部中断初始化(舵轮光电门校准)
 
     // 设备层初始化

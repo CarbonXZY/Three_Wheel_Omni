@@ -2,9 +2,9 @@
 #define ITA_ROBOT_H
 
 #include "crt_chassis.h"
-#include "dvc_dr16.h"
+#include "dvc_sbus.h"
 #include "dvc_nvidiaorin.h"
-
+#include "dvc_minipc.h"
 /**
  * @brief DR16控制数据来源
  *
@@ -29,15 +29,16 @@ enum Enum_Active_Controller
     Controller_NONE = 0,
     Controller_DR16,
     Controller_Orin,
+    Controller_MiniPC,
 };
 
 class Class_Chariot
 {
 public:
-    Class_DR16 DR16;
+    Class_SBUS DR16;
     Class_Orin Orin;
     Class_Omni_Chassis Chassis;
-    
+    Class_MiniPC MiniPC;
     void Init(float __Dead_Zone = 0);
     void TIM_Control_Callback();
     void TIM_Calculate_PeriodElapsedCallback();
