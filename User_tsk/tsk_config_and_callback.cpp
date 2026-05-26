@@ -114,14 +114,14 @@ void Task1ms_TIM5_Callback()
     if (mod100 >= 100)
     {
         chariot.TIM_100ms_Alive_PeriodElapsedCallback(); // DR16存活检测,底盘存活检测
-
+				chariot.MiniPC.TIM_100ms_Alive_PeriodElapsedCallback();
         mod100 = 0;
     }
     mod101++;
     if (mod101 >= 101)
     {
         chariot.TIM_101ms_Alive_PeriodElapsedCallback(); // orin存活检测
-
+				
         mod101 = 0;
     }
     chariot.TIM_Unline_Protect_PeriodElapsedCallback();
@@ -130,7 +130,6 @@ void Task1ms_TIM5_Callback()
 }
 void MiniPC_Callback(uint8_t *rx_data, uint32_t len) 
 {
-    // 如果你不需要用到 len，直接放着就行
     chariot.MiniPC.USB_Rx_Callback(rx_data);
 }
 /**

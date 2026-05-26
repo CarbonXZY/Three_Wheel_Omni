@@ -70,7 +70,7 @@ void Class_Chariot::TIM_Unline_Protect_PeriodElapsedCallback()
         return;
     }
     if (DR16.Get_Switch_C() == SBUS_Switch_Status_UP &&
-        Orin.Get_Status() == Orin_Status_DISABLE)    
+        MiniPC.Get_MiniPC_Status() == MiniPC_Status_DISABLE)    
     {
         Chassis.Set_Chassis_Control_Type(Chassis_Control_Type_DISABLE);
         Chassis.Set_Target_Velocity_X(0);

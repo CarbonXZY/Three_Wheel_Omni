@@ -19,7 +19,7 @@ void Class_MiniPC::Init(Struct_USB_Manage_Object &__USB_Manage_Object)
 void Class_MiniPC::USB_Rx_Callback(uint8_t *rx_data)
 {
     // 滑动窗口, 判断迷你主机是否在线
-    Pre_MiniPC_Flag = MiniPC_Flag;
+		MiniPC_Flag++;
     Data_Process(); 
 }
 
