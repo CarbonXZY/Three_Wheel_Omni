@@ -1,26 +1,31 @@
 /**
  * @file drv_uart.h
- * @author Lucy (2478427315@qq.com)
- * @brief 
+ * @author cjw by yssickjgd
+ * @brief UART通信初始化与配置流程
  * @version 0.1
- * @date 2024-10-04
+ * @date 2025-07-1 0.1 26赛季定稿
  *
- * @copyright RoboPioneer (c) 2024
- *
+ * @copyright ZLLC 2026
+ * 
  */
 
 #ifndef DRV_UART_H
 #define DRV_UART_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* Includes ------------------------------------------------------------------*/
 
-#include "stm32h7xx_hal.h"
-#include "string.h"
+#include "stm32h7xx_hal.h" 
+#include "usart.h"
 
+  
 /* Exported macros -----------------------------------------------------------*/
 
 // 缓冲区字节长度
-#define UART_BUFFER_SIZE 256
+#define UART_BUFFER_SIZE 128
 
 /* Exported types ------------------------------------------------------------*/
 
@@ -39,40 +44,56 @@ struct Struct_UART_Manage_Object
     uint8_t Tx_Buffer[UART_BUFFER_SIZE];
     uint8_t Rx_Buffer[UART_BUFFER_SIZE];
     uint16_t Rx_Buffer_Length;
+    uint16_t Tx_Buffer_Length;
+    uint16_t Rx_Length;
+    uint16_t Tx_Length;
     UART_Call_Back Callback_Function;
 };
 
 /* Exported variables --------------------------------------------------------*/
 
+
+
+//extern UART_HandleTypeDef huart1;
+////extern UART_HandleTypeDef huart2;
+//extern UART_HandleTypeDef huart3;
+//extern UART_HandleTypeDef huart6;
+////extern UART_HandleTypeDef huart7;
+extern DMA_HandleTypeDef hdma_uart5_rx;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart5;
 extern UART_HandleTypeDef huart7;
-extern UART_HandleTypeDef huart8;
+//extern UART_HandleTypeDef huart8;
 extern UART_HandleTypeDef huart9;
 extern UART_HandleTypeDef huart10;
 
-extern Struct_UART_Manage_Object UART1_Manage_Object;
-extern Struct_UART_Manage_Object UART2_Manage_Object;
-extern Struct_UART_Manage_Object UART3_Manage_Object;
-extern Struct_UART_Manage_Object UART4_Manage_Object;
-extern Struct_UART_Manage_Object UART5_Manage_Object;
-extern Struct_UART_Manage_Object UART6_Manage_Object;
-extern Struct_UART_Manage_Object UART7_Manage_Object;
-extern Struct_UART_Manage_Object UART8_Manage_Object;
-extern Struct_UART_Manage_Object UART9_Manage_Object;
-extern Struct_UART_Manage_Object UART10_Manage_Object;
+extern struct Struct_UART_Manage_Object UART1_Manage_Object;
+extern struct Struct_UART_Manage_Object UART2_Manage_Object;
+extern struct Struct_UART_Manage_Object UART3_Manage_Object;
+extern struct Struct_UART_Manage_Object UART4_Manage_Object;
+extern struct Struct_UART_Manage_Object UART5_Manage_Object;
+extern struct Struct_UART_Manage_Object UART6_Manage_Object;
+extern struct Struct_UART_Manage_Object UART7_Manage_Object;
+extern struct Struct_UART_Manage_Object UART8_Manage_Object;
+extern struct Struct_UART_Manage_Object UART9_Manage_Object;
+extern struct Struct_UART_Manage_Object UART10_Manage_Object;
+
+extern float temp_power;
 
 /* Exported function declarations --------------------------------------------*/
 
 void UART_Init(UART_HandleTypeDef *huart, UART_Call_Back Callback_Function, uint16_t Rx_Buffer_Length);
 
-void UART_Reinit(UART_HandleTypeDef *huart);
-
 uint8_t UART_Send_Data(UART_HandleTypeDef *huart, uint8_t *Data, uint16_t Length);
-char UART_Send_Char_Data(UART_HandleTypeDef *huart, char *Data, uint16_t Length);
 
-void TIM_1ms_UART_PeriodElapsedCallback();
+void TIM_UART_PeriodElapsedCallback();
+
+void UART_Cleanup(UART_HandleTypeDef *huart);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
 
-/************************ COPYRIGHT(C) ROBOPIONEER **************************/
+/************************ COPYRIGHT(C) USTC-ROBOWALKER **************************/

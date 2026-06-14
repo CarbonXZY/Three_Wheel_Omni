@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/clover/Desktop/CDC_windows/build/cmake_install.cmake",
+		"C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/cmake_install.cmake",
+		"C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

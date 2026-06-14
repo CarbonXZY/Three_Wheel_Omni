@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++14 -o CMakeFiles\\MySerialApp.dir\\main.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\main.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/main.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/CMakeFiles/MySerialApp.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPort.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPort.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPort.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPort.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPortBase.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortBase.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPortBase.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortBase.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPortInfo.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfo.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPortInfo.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfo.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPortInfoBase.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoBase.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPortInfoBase.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfoBase.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPortNativeSyncWinBase.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortNativeSyncWinBase.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPortNativeSyncWinBase.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortNativeSyncWinBase.cpp.obj"
+},
+{
+  "directory": "C:/Users/clover/Desktop/CDC_windows/build",
+  "command": "C:\\PROGRA~2\\MICROS~4\\18\\BUILDT~1\\VC\\Tools\\Llvm\\x64\\bin\\clang.exe -DBUILDING_LIBCSERIALPORT -DCSERIALPORT_NATIVE_SYNC -Dlibcserialport_EXPORTS -IC:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/cmake/../include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++14 -o thirdparty\\CSerialPort\\lib\\CMakeFiles\\libcserialport.dir\\__\\src\\SerialPortInfoWinBase.cpp.obj -c C:\\Users\\clover\\Desktop\\CDC_windows\\thirdparty\\CSerialPort\\src\\SerialPortInfoWinBase.cpp",
+  "file": "C:/Users/clover/Desktop/CDC_windows/thirdparty/CSerialPort/src/SerialPortInfoWinBase.cpp",
+  "output": "C:/Users/clover/Desktop/CDC_windows/build/thirdparty/CSerialPort/lib/CMakeFiles/libcserialport.dir/__/src/SerialPortInfoWinBase.cpp.obj"
+}
+]

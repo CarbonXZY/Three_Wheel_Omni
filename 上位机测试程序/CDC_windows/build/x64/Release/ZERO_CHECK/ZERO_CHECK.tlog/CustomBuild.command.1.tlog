@@ -1,0 +1,10 @@
+^C:\USERS\CLOVER\DESKTOP\CDC_WINDOWS\BUILD\CMAKEFILES\64D73F7C039C3D12339C877E863784EF\GENERATE.STAMP.RULE
+setlocal
+D:\clover\Work\Environment\cmake-4.32\bin\cmake.exe -SC:/Users/clover/Desktop/CDC_windows -BC:/Users/clover/Desktop/CDC_windows/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/clover/Desktop/CDC_windows/build/MySerialApp.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

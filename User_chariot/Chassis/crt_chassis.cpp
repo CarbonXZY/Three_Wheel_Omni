@@ -117,12 +117,12 @@ void Class_Omni_Chassis::Self_Resolution()
     float Now_Wheel_Omega[3] = {0.0f};
     for (int i = 0; i < 3; i++)
     {
-        W[i] = - Motor_Wheel[i].Get_Now_Omega();
+        Now_Wheel_Omega[i] = - Motor_Wheel[i].Get_Now_Omega();
     }
 
-    temp_velocity_x_now = (W[2] - W[1]) * SQRT3 * WHEEL_DIAMETER / 6.0f;
-    temp_velocity_y_now = (2.0f * W[0] - W[1] - W[2]) * WHEEL_DIAMETER / 6.0f;
-    temp_omega_now = (W[0] + W[1] + W[2]) * WHEEL_DIAMETER / (6.0f * WHEEL_TO_CORE_DISTANCE);
+    temp_velocity_x_now = (Now_Wheel_Omega[2] - Now_Wheel_Omega[1]) * SQRT3 * WHEEL_DIAMETER / 6.0f;
+    temp_velocity_y_now = (2.0f * Now_Wheel_Omega[0] - Now_Wheel_Omega[1] - Now_Wheel_Omega[2]) * WHEEL_DIAMETER / 6.0f;
+    temp_omega_now = (Now_Wheel_Omega[0] + Now_Wheel_Omega[1] + Now_Wheel_Omega[2]) * WHEEL_DIAMETER / (6.0f * WHEEL_TO_CORE_DISTANCE);
 
     Set_Now_Velocity_X(temp_velocity_x_now);
     Set_Now_Velocity_Y(temp_velocity_y_now);
